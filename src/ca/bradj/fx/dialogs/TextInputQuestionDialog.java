@@ -12,6 +12,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import ca.bradj.common.base.Failable;
+import ca.bradj.common.base.Preconditions2;
 
 public class TextInputQuestionDialog {
 	private static final int DEFAULT_COMPONENT_SPACING = 10;
@@ -22,6 +23,10 @@ public class TextInputQuestionDialog {
 
 	TextInputQuestionDialog() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	public void setMessage(String message) {
+		this.message = Preconditions2.checkNotEmpty(message);
 	}
 
 	public Failable<String> showDialog() {
