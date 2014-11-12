@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ca.bradj</groupId>
 	<artifactId>brava</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -24,16 +24,10 @@
 			<version>17.0</version>
 		</dependency>
 	</dependencies>
-  <distributionManagement>
-  	<snapshotRepository>
-  		<id>snapshots</id>
-  		<name>Internal Repository</name>
-  		<url>http://localhost:8080/nexus/content/repositories/snapshots</url>
-  	</snapshotRepository>
-  	<repository>
-  		<id>releases</id>
-  		<name>Internal Repository</name>
-  		<url>http://localhost:8080/nexus/content/repositories/releases</url>
-  	</repository>
-  </distributionManagement>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-site</id>
+			<url>http://bradj.ca:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
